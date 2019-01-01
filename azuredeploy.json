@@ -113,5 +113,19 @@
           "osType": "Linux"
         }
       }
-    ]
+    ],
+    "outputs": {
+      "storageAccountName": {
+        "type": "string",
+        "value": "[listKeys(parameters('storageAccountName'),'2017-10-01').keys[0].value]"
+      },
+      "containerGroupName": {
+        "type": "string",
+        "value": "[variables('containerGroupName')]"
+      },
+      "fileShareName": {
+        "type": "string",
+        "value": "[parameters('fileShareName')]"
+      }
+    }  
   }
